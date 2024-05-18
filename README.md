@@ -1,6 +1,6 @@
 
 # Career Tree
-https://github.com/Cann2000/CareerTree/assets/94134588/451af24c-4acd-4263-b064-c76db01a0d8e
+https://github.com/Cann2000/CareerTree/assets/94134588/e8e588bc-ff58-42b7-b5a6-594e0d563aa4
 
 Hello, the purpose of my application, which I made with Kotlin, is to access various information on subjects with different features. You can read information on any subject you want, add it to your favorites, and search for the data you want. If you wish, you can download my application from play store -> https://play.google.com/store/apps/details?id=com.canyldz.careertree
 
