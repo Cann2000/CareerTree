@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="profile"
+            type="com.example.careertree.model.profile.Profile" />
+        <variable
+            name="listener"
+            type="com.example.careertree.utility.ClickListener"/>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:onClick="@{listener::dataClicked}"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profileRecyclerImageView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:layout_weight="0.8"
+            android:downloadImage="@{profile.imageUrl}">
+
+        </de.hdodenhof.circleimageview.CircleImageView>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.5"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_gravity="center">
+
+
+            <TextView
+                android:id="@+id/profileName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/average_text_size"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:text="@{profile.name}"
+                android:layout_margin="8dp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/profileSchool"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/average_text_size"
+                android:text="@{profile.school}"
+                android:layout_margin="8dp">
+
+            </TextView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

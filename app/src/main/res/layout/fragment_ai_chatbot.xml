@@ -1,0 +1,102 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/idTILQuery"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/idTVQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:padding="5dp"
+                android:text="Gemini AI"
+                android:drawableLeft="@drawable/baseline_ai_icon_24"
+                android:drawablePadding="5dp"
+                android:drawableTint="#000000"
+                android:textColor="@color/black"
+                android:textSize="@dimen/maximum_title_text_size" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/messageAnim"
+                android:visibility="gone"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:padding="5dp"
+                app:lottie_rawRes="@raw/anim"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true">
+
+            </com.airbnb.lottie.LottieAnimationView>
+
+            <TextView
+                android:id="@+id/txtResponse"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/average_text_size" />
+
+        </LinearLayout>
+
+    </ScrollView>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/idTILQuery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:hint="Mesaj giriniz"
+        android:padding="5dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="10dp"
+        android:textColorHint="#393636"
+        app:hintTextColor="#393636">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/edt_back_color"
+            android:drawableTint="#393636"
+            android:ems="10"
+            android:imeOptions="actionSend"
+            android:importantForAutofill="no"
+            android:inputType="textEmailAddress"
+            android:textColor="#393636"
+            android:textColorHint="#393636"
+            android:textSize="14sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/lavender"
+        android:padding="20dp"
+        app:icon="@drawable/ic_send"></Button>
+</RelativeLayout>

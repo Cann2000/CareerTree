@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="selectedLanguage"
+            type="com.example.careertree.model.web.WebFrontendLanguage" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:fitsSystemWindows="false">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+                app:layout_scrollFlags="scroll|enterAlwaysCollapsed">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/infoTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{selectedLanguage.name + &quot; nedir&quot;}"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/average_title_text_size">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{selectedLanguage.info}"
+                        android:layout_below="@+id/infoTitle"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:textSize="@dimen/average_text_size">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/udemy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Nereden Öğrenebilirim"
+                        android:layout_below="@+id/info"
+                        android:textStyle="bold"
+                        android:layout_marginTop="15dp"
+                        android:textSize="@dimen/average_title_text_size"></TextView>
+                    <TextView
+                        android:id="@+id/udemyInfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Resme tıklayarak videoları inceleyebilirsiniz."
+                        android:layout_below="@+id/udemy"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="15dp"
+                        android:textSize="@dimen/average_text_size"></TextView>
+
+                    <ImageView
+                        android:visibility="invisible"
+                        android:id="@+id/udemyImage"
+                        android:layout_width="175dp"
+                        android:layout_height="80dp"
+                        android:layout_below="@+id/udemyInfo"
+                        android:layout_marginBottom="15dp"
+                        app:srcCompat="@drawable/udemy"></ImageView>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>

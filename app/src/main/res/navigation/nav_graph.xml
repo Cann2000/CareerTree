@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/logInFragment">
+
+    <fragment
+        android:id="@+id/homePageFragment"
+        android:name="com.example.careertree.view.homepage.HomePageFragment"
+        android:label="HomePageFragment"
+        tools:layout="@layout/fragment_home_page" >
+        <action
+            android:id="@+id/action_homePageFragment_to_mobileContentFragment"
+            app:destination="@id/mobileContentFragment" />
+        <action
+            android:id="@+id/action_homePageFragment_to_webContentFragment"
+            app:destination="@id/webContentFragment" />
+        <action
+            android:id="@+id/action_homePageFragment_to_gameEngineContentFragment"
+            app:destination="@id/gameEngineContentFragment" />
+        <action
+            android:id="@+id/action_homePageFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_homePageFragment_to_favoriteListFragment"
+            app:destination="@id/favoriteListFragment" />
+        <action
+            android:id="@+id/action_homePageFragment_to_personProfilesFragment"
+            app:destination="@id/personProfilesFragment" />
+        <action
+            android:id="@+id/action_homePageFragment_to_eventListFragment"
+            app:destination="@id/eventListFragment" />
+        <action
+            android:id="@+id/action_homePageFragment_to_followedEventListFragment"
+            app:destination="@id/followedEventListFragment" />
+        <action
+            android:id="@+id/action_homePageFragment_to_aiContentFragment"
+            app:destination="@id/aiContentFragment" />
+        <action
+            android:id="@+id/action_homePageFragment_to_aiChatBotFragment"
+            app:destination="@id/aiChatBotFragment" />
+        <action
+            android:id="@+id/action_homePageFragment_to_cyberSecurityContentFragment"
+            app:destination="@id/cyberSecurityContentFragment" />
+        <action
+            android:id="@+id/action_homePageFragment_to_dataScienceContentFragment"
+            app:destination="@id/dataScienceContentFragment" />
+        <action
+            android:id="@+id/action_homePageFragment_to_followedEventListFragment2"
+            app:destination="@id/followedEventListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mobileContentFragment"
+        android:name="com.example.careertree.view.mobile.MobileContentFragment"
+        android:label="fragment_android_content"
+        tools:layout="@layout/fragment_mobile_content" >
+        <action
+            android:id="@+id/action_mobileContentFragment_to_mobileDetailsFragment"
+            app:destination="@id/mobileDetailsFragment" />
+        <action
+            android:id="@+id/action_mobileContentFragment_to_compareFragment"
+            app:destination="@id/compareFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mobileDetailsFragment"
+        android:name="com.example.careertree.view.mobile.MobileDetailsFragment"
+        android:label="AndroidDetailsFragment"
+        tools:layout="@layout/fragment_mobile_details" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/webContentFragment"
+        android:name="com.example.careertree.view.web.WebContentFragment"
+        android:label="fragment_web_content"
+        tools:layout="@layout/fragment_web_content" >
+        <action
+            android:id="@+id/action_webContentFragment_to_backendContentFragment"
+            app:destination="@id/backendContentFragment" />
+        <action
+            android:id="@+id/action_webContentFragment_to_frontendContentFragment"
+            app:destination="@id/frontendContentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/backendContentFragment"
+        android:name="com.example.careertree.view.web.WebBackendContentFragment"
+        android:label="fragment_backend_content"
+        tools:layout="@layout/fragment_backend_content" >
+        <action
+            android:id="@+id/action_backendContentFragment_to_webBackendDetailsFragment"
+            app:destination="@id/webBackendDetailsFragment" />
+        <action
+            android:id="@+id/action_backendContentFragment_to_compareFragment"
+            app:destination="@id/compareFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/frontendContentFragment"
+        android:name="com.example.careertree.view.web.WebFrontendContentFragment"
+        android:label="fragment_frontend"
+        tools:layout="@layout/fragment_frontend_content" >
+        <action
+            android:id="@+id/action_frontendContentFragment_to_webFrontendDetailsFragment"
+            app:destination="@id/webFrontendDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/webFrontendDetailsFragment"
+        android:name="com.example.careertree.view.web.WebFrontendDetailsFragment"
+        android:label="fragment_web_frontend_details"
+        tools:layout="@layout/fragment_web_frontend_details" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/webBackendDetailsFragment"
+        android:name="com.example.careertree.view.web.WebBackendDetailsFragment"
+        android:label="fragment_web_backend_details"
+        tools:layout="@layout/fragment_web_backend_details" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameEngineContentFragment"
+        android:name="com.example.careertree.view.game.GameEngineContentFragment"
+        android:label="GameEngineContentFragment"
+        tools:layout="@layout/fragment_game_engine_content">
+        <action
+            android:id="@+id/action_gameEngineContentFragment_to_gameEngineDetailsFragment"
+            app:destination="@id/gameEngineDetailsFragment" />
+        <action
+            android:id="@+id/action_gameEngineContentFragment_to_compareFragment"
+            app:destination="@id/compareFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameEngineDetailsFragment"
+        android:name="com.example.careertree.view.game.GameEngineDetailsFragment"
+        android:label="GameEngineDetailsFragment"
+        tools:layout="@layout/fragment_game_engine_details">
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.careertree.view.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_homePageFragment"
+            app:destination="@id/homePageFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_personProfilesFragment"
+            app:destination="@id/personProfilesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/compareFragment"
+        android:name="com.example.careertree.view.compare.CompareFragment"
+        android:label="CompareFragment"
+        tools:layout="@layout/fragment_compare">
+        <argument
+            android:name="key"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/logInFragment"
+        android:name="com.example.careertree.view.firebase.authentication.SignInFragment"
+        android:label="LogInFragment"
+        tools:layout="@layout/fragment_sign_in">
+        <action
+            android:id="@+id/action_logInFragment_to_homePageFragment"
+            app:destination="@id/homePageFragment" />
+        <action
+            android:id="@+id/action_logInFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.careertree.view.firebase.authentication.RegisterFragment"
+        android:label="RegisterFragment"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/action_registerFragment_to_logInFragment"
+            app:destination="@id/logInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/personProfilesFragment"
+        android:name="com.example.careertree.view.firebase.PersonProfilesFragment"
+        android:label="fragment_person_profiles"
+        tools:layout="@layout/fragment_person_profiles" >
+        <action
+            android:id="@+id/action_personProfilesFragment_to_personProfilesDetailsFragment"
+            app:destination="@id/personProfilesDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/personProfilesDetailsFragment"
+        android:name="com.example.careertree.view.firebase.PersonProfilesDetailsFragment"
+        android:label="PersonProfilesDetailsFragment"
+        tools:layout="@layout/fragment_person_profiles_details">
+        <argument
+            android:name="token"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteListFragment"
+        android:name="com.example.careertree.view.favorite.FavoriteListFragment"
+        android:label="fragment_favorite_list"
+        tools:layout="@layout/fragment_favorite_list" />
+    <fragment
+        android:id="@+id/eventListFragment"
+        android:name="com.example.careertree.view.event.EventListFragment"
+        android:label="fragment_event_list"
+        tools:layout="@layout/fragment_event_list" />
+    <fragment
+        android:id="@+id/followedEventListFragment"
+        android:name="com.example.careertree.view.event.FollowedEventListFragment"
+        android:label="fragment_followed_event_list"
+        tools:layout="@layout/fragment_followed_event_list" />
+    <fragment
+        android:id="@+id/aiContentFragment"
+        android:name="com.example.careertree.view.ai.AiContentFragment"
+        android:label="AiContentFragment"
+        tools:layout="@layout/fragment_ai_content">
+        <action
+            android:id="@+id/action_aiContentFragment_to_aiDetailsFragment"
+            app:destination="@id/aiDetailsFragment" />
+        <action
+            android:id="@+id/action_aiContentFragment_to_compareFragment"
+            app:destination="@id/compareFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aiDetailsFragment"
+        android:name="com.example.careertree.view.ai.AiDetailsFragment"
+        android:label="AiDetailsFragment"
+        tools:layout="@layout/fragment_ai_details">
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/aiChatBotFragment"
+        android:name="com.example.careertree.view.gemini_ai.AiChatBotFragment"
+        android:label="AiChatBotFragment"
+        tools:layout="@layout/fragment_ai_chatbot"/>
+    <fragment
+        android:id="@+id/cyberSecurityContentFragment"
+        android:name="com.example.careertree.view.cyber_security.CyberSecurityContentFragment"
+        android:label="CyberSecurityContentFragment"
+        tools:layout="@layout/fragment_cyber_security_content">
+        <action
+            android:id="@+id/action_cyberSecurityContentFragment_to_cyberSecurityDetailsFragment"
+            app:destination="@id/cyberSecurityDetailsFragment" />
+        <action
+            android:id="@+id/action_cyberSecurityContentFragment_to_compareFragment"
+            app:destination="@id/compareFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cyberSecurityDetailsFragment"
+        android:name="com.example.careertree.view.cyber_security.CyberSecurityDetailsFragment"
+        android:label="CyberSecurityDetailsFragment"
+        tools:layout="@layout/fragment_cyber_security_details">
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/dataScienceContentFragment"
+        android:name="com.example.careertree.view.data_science.DataScienceContentFragment"
+        android:label="DataScienceContentFragment"
+        tools:layout="@layout/fragment_data_science_content">
+        <action
+            android:id="@+id/action_dataScienceContentFragment_to_dataScienceDetailsFragment"
+            app:destination="@id/dataScienceDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dataScienceDetailsFragment"
+        android:name="com.example.careertree.view.data_science.DataScienceDetailsFragment"
+        android:label="DataScienceDetailsFragment"
+        tools:layout="@layout/fragment_cyber_security_details">
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+</navigation>

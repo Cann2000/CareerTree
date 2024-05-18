@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="profile"
+            type="com.example.careertree.model.profile.Profile" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/errorText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hata! Tekrar Deneyiniz"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/loadProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:indeterminateTint="#2196F3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/personProfilesFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".view.firebase.PersonProfilesDetailsFragment">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/nestedScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical"
+                    app:layout_scrollFlags="scroll|enterAlwaysCollapsed">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/ImageViewProfile"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:src="@drawable/baseline_account_circle_24"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/nameTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/ImageViewProfile"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:text="Ad Soyad"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/average_title_text_size"
+                            tools:layout_editor_absoluteX="24dp"
+                            tools:layout_editor_absoluteY="556dp" />
+
+                        <TextView
+                            android:id="@+id/textName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/nameTitle"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:backgroundTint="#8C000000"
+                            android:text="@{profile.name}"
+                            android:ems="10"
+                            android:gravity="start|top"
+                            android:hint="Ad Soyad"
+                            android:textSize="@dimen/average_text_size"
+                            tools:ignore="TextSizeCheck" />
+
+                        <TextView
+                            android:id="@+id/schoolTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textName"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:text="Okul"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/average_title_text_size"
+                            tools:layout_editor_absoluteX="24dp"
+                            tools:layout_editor_absoluteY="556dp" />
+
+                        <TextView
+                            android:id="@+id/textSchool"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/schoolTitle"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:backgroundTint="#8C000000"
+                            android:text="@{profile.school}"
+                            android:ems="10"
+                            android:gravity="start|top"
+                            android:hint="Okul"
+                            android:textSize="@dimen/average_text_size"
+                            tools:ignore="TextSizeCheck" />
+
+                        <TextView
+                            android:id="@+id/universityDepartmentTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textSchool"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:text="Bölüm"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/average_title_text_size"
+                            tools:layout_editor_absoluteX="24dp"
+                            tools:layout_editor_absoluteY="556dp" />
+
+                        <TextView
+                            android:id="@+id/textUniversityDepartment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/universityDepartmentTitle"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:backgroundTint="#8C000000"
+                            android:text="@{profile.universityDepartment}"
+                            android:ems="10"
+                            android:gravity="start|top"
+                            android:hint="Bölüm"
+                            android:textSize="@dimen/average_text_size"
+                            tools:ignore="TextSizeCheck" />
+
+                        <TextView
+                            android:id="@+id/skillsTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textUniversityDepartment"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:text="Beceriler"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/average_title_text_size"
+                            tools:layout_editor_absoluteX="24dp"
+                            tools:layout_editor_absoluteY="556dp" />
+
+                        <TextView
+                            android:id="@+id/textSkills"
+                            android:layout_below="@+id/skillsTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="10dp"
+                            android:gravity="start|top"
+                            android:text="@{profile.skills}"
+                            android:textSize="@dimen/average_text_size"
+                            android:hint="Beceriler" />
+
+                        <TextView
+                            android:id="@+id/portfolioTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textSkills"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:text="Portfolyo"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/average_title_text_size"
+                            tools:layout_editor_absoluteX="24dp"
+                            tools:layout_editor_absoluteY="556dp" />
+
+                        <TextView
+                            android:id="@+id/textPortfolio"
+                            android:layout_below="@+id/portfolioTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="10dp"
+                            android:gravity="start|top"
+                            android:textColor="@color/blue"
+                            android:text="@{profile.portfolio}"
+                            android:textSize="@dimen/average_text_size"
+                            android:hint="Cv &amp; Portfolyo Link"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

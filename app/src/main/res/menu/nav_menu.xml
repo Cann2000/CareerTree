@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn ="navigation_view">
+
+    <group
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_search"
+            android:title="Kullanıcı Ara"
+            android:icon="@drawable/baseline_search_24"></item>
+
+        <item
+            android:id="@+id/nav_profile"
+            android:title="Profil"
+            android:icon="@drawable/baseline_co_present_24"></item>
+
+        <!--
+        <item
+            android:id="@+id/nav_favorite"
+            android:title="Favoriler"
+            android:icon="@drawable/baseline_star_outline_24"></item>
+            -->
+
+        <item
+            android:id="@+id/nav_events"
+            android:icon="@drawable/baseline_event_24"
+            android:title="Etkinlikler"></item>
+
+        <item
+            android:id="@+id/nav_followed_events"
+            android:title="Takip Edilen Etkinlikler"
+            android:icon="@drawable/baseline_event_followed_24"></item>
+
+        <item
+            android:id="@+id/nav_aiChatBot"
+            android:title="Yapay Zekaya sor"
+            android:icon="@drawable/baseline_ai_icon_24"
+            ></item>
+
+    </group>
+
+</menu>

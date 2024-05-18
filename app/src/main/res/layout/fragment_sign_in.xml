@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.firebase.authentication.SignInFragment">
+
+
+    <RelativeLayout
+        android:id="@+id/authenticationLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.423"
+        android:visibility="visible">
+
+        <EditText
+            android:id="@+id/editTextEmailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:hint="Email"></EditText>
+
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editTextEmailAddress"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:hint="Password"
+            android:password="true"></EditText>
+
+        <Button
+            android:id="@+id/buttonSignIn"
+            android:layout_width="110dp"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/lavender"
+            android:layout_below="@+id/editTextPassword"
+            android:layout_marginLeft="75dp"
+            android:text="Giriş Yap"></Button>
+
+
+
+        <TextView
+            android:id="@+id/registerLinkTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editTextPassword"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="35dp"
+            android:layout_toRightOf="@+id/buttonSignIn"
+            android:text="Kayıt Ol"
+            android:textSize="15dp"
+            android:textColor="#008EFF"
+            android:background="#05008EFF"
+            android:textStyle="italic"
+            android:clickable="true">
+
+        </TextView>
+
+        <Button
+            android:id="@+id/signInGoogleButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/buttonSignIn"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="#49A3EA"
+            android:drawableLeft="@drawable/google"
+            android:elevation="8dp"
+            android:text="Google ile giriş yap"
+            android:textColor="#fff"></Button>
+        <Button
+            android:id="@+id/signInAnonymousButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/signInGoogleButton"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:backgroundTint="#7089A1"
+            android:drawableLeft="@drawable/baseline_person_24"
+            android:elevation="8dp"
+            android:text="Hızlı Giriş"
+            android:textColor="#fff"></Button>
+    </RelativeLayout>
+
+
+    <ProgressBar
+        android:id="@+id/loadProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:indeterminateTint="#00B0FF"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

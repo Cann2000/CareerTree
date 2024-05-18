@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.CareerTree" parent="Theme.Material3.DayNight">
+
+        <item name="colorPrimary">#DFDFDF</item>
+
+    </style>
+
+    <style name="Theme.CareerTree" parent="Base.Theme.CareerTree" />
+
+</resources>

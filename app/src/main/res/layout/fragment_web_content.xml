@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="40dp"
+    android:layout_marginStart="5dp"
+    android:layout_marginEnd="5dp"
+    android:minHeight="175dp"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="Web Geliştiriciliği"
+        android:textColor="#0A8FCC"
+        android:textSize="@dimen/maximum_title_text_size"></TextView>
+
+
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="170dp"
+        android:layout_marginTop="-25dp"
+        app:srcCompat="@drawable/web"></ImageView>
+
+    <TextView
+        android:id="@+id/personalSalaryCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="2dp"
+        android:textSize="@dimen/personal_salary_count_text_size"></TextView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/minSalary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="20dp"
+            android:text="En Düşük"
+            android:textSize="@dimen/average_text_size"></TextView>
+
+        <TextView
+            android:id="@+id/avarageSalary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/minSalary"
+            android:layout_marginLeft="42dp"
+            android:layout_marginTop="20dp"
+            android:text="Ortalama Maaş"
+            android:textSize="@dimen/average_text_size"></TextView>
+
+        <TextView
+            android:id="@+id/maxSalary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/avarageSalary"
+            android:layout_marginLeft="42dp"
+            android:layout_marginTop="20dp"
+            android:text="En Yüksek"
+            android:textSize="@dimen/average_text_size"></TextView>
+
+
+        <TextView
+            android:id="@+id/priceMinSalary"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/minSalary"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="15dp"
+            android:textAlignment="center"
+            android:textSize="@dimen/minimum_text_size"></TextView>
+
+        <TextView
+            android:id="@+id/priceAverageSalary"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/minSalary"
+            android:layout_toRightOf="@+id/priceMinSalary"
+            android:layout_marginLeft="42dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="15dp"
+            android:textAlignment="center"
+            android:textSize="@dimen/minimum_text_size"></TextView>
+
+        <TextView
+            android:id="@+id/priceMaxSalary"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/maxSalary"
+            android:layout_toRightOf="@+id/priceAverageSalary"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="15dp"
+            android:textAlignment="center"
+            android:textSize="@dimen/minimum_text_size"></TextView>
+
+        <TextView
+            android:id="@+id/sectorInfoTitle"
+            android:layout_below="@+id/priceMaxSalary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/average_title_text_size"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:textStyle="bold"
+            android:text="Sektör Bilgisi"></TextView>
+
+        <TextView
+            android:id="@+id/comparison"
+            android:layout_below="@+id/sectorInfoTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="@dimen/average_text_size"
+            android:text="Web backend geliştirmesi, projenin ihtiyaçlarına ve gereksinimlerine en uygun dil ve framework'ü seçmekle ilgili bir süreçtir. Farklı dillerin ve framework'lerin avantajları ve dezavantajları bulunmaktadır, bu nedenle hangi dilin kullanılacağı, projenin büyüklüğü, ölçeklenebilirlik ihtiyaçları, performans beklentileri ve geliştirici ekibinin deneyimi gibi faktörlere bağlıdır."></TextView>
+
+        <ImageButton
+            android:id="@+id/backend"
+            android:layout_below="@+id/comparison"
+            android:layout_alignParentStart="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/backend"></ImageButton>
+
+        <ImageButton
+            android:id="@+id/frontend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/comparison"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/frontend"></ImageButton>
+    </RelativeLayout>
+
+
+</LinearLayout>
