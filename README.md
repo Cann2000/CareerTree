@@ -23,6 +23,7 @@ While developing my application, I developed it in accordance with the 🌟MVVM 
 - Resource structure
 - Firebase Auth
 - Firebase Firestore Database
+- Firebase Storage
 - Firebase Analytics
 - Firebase Cloud Messaging
 
